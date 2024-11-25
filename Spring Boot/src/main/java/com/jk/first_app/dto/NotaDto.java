@@ -1,5 +1,10 @@
 package com.jk.first_app.dto;
 
+import com.jk.first_app.model.Nota;
+
+// DTO (Data Transfer Object) é um padrão de projeto que tem como objetivo transferir dados entre
+// subsistemas de um software. Ele é utilizado para encapsular os dados que serão transferidos.
+
 public class NotaDto {
   private Long id;
   private String titulo;
@@ -9,6 +14,10 @@ public class NotaDto {
     this.id = id;
     this.titulo = titulo;
     this.texto = texto;
+  }
+
+  public Nota toEntity() {
+    return new Nota(titulo, texto);
   }
 
   public Long getId() {

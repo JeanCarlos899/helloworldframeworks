@@ -8,6 +8,10 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+// O model é responsável por representar as entidades do sistema. Ele é responsável por
+// representar as informações que serão armazenadas no banco de dados e manipuladas
+// pelo sistema.
+
 @Entity
 @Table(name = "nota")
 public class Nota {

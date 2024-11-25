@@ -9,6 +9,11 @@ import com.jk.first_app.dto.NotaDto;
 
 import java.util.List;
 
+
+// O controller é responsável por receber as requisições HTTP e chamar os métodos do service
+// para executar as operações necessárias. Ele também é responsável por retornar as respostas
+// HTTP adequadas para cada requisição.
+
 @RestController
 @RequestMapping("/notas")
 public class NotaController {

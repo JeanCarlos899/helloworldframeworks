@@ -27,7 +27,7 @@ public class NotaService {
   }
 
   public NotaDto adicionarNota(NotaDto notaDto) {
-    Nota nota = new Nota(notaDto.getTitulo(), notaDto.getTexto());
+    Nota nota = notaDto.toEntity();
     Nota notaSalva = notaRepository.save(nota);
     return new NotaDto(notaSalva.getId(), notaSalva.getTitulo(), notaSalva.getTexto());
   }
